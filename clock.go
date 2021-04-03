@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"strconv"
 )
 
@@ -19,8 +18,5 @@ func countSeconds(userInput int) string {
 		seconds string = strconv.Itoa(int(int(userInput%3600) % 60))
 	)
 
-	fmt.Printf("\n%v hour, %v minutes and %v seconds\n",
-		hours, minutes, seconds)
-
-	return ""
+	return hours + ":" + minutes + ":" + seconds
 }

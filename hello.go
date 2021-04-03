@@ -6,31 +6,41 @@ import (
 	"rsc.io/quote"
 )
 
-// initialized variable with type declaration
-// var goint int = 3
-// var gostring string = "this string is strongly typed"
-// var gofloat float32 = 23
+//initialized variable with type declaration
+var goint int
+var gostring string = "this string is strongly typed"
+var gofloat float32 = 23
 
 //there are two ways of declaring multiple variables at the time
-// var (
-// 	myString string = "this is my string"
-// 	myInt    int    = 123
-// ) // var block
+var (
+	myString string = "string inside block declarations"
+	myInt    int    = 123
+) //var block
 
-/* you can also declare variables like this*/
+// this is the equivalent of a while loop
+// for goint < 10 {
+// 	fmt.Println(goint + 1)
+// 	goint++
+// }
+// classic for loop in go
+//for i := 0; i < 10; i++{
+//   your code here
+//}
 
 func main() {
 	// this syntax detects variable type, but it has
 	// to be written and USED inside a function
 	//weirdSyntax := `some weird syntax`
-	// fmt.Println("\n" + quote.Opt() + "\n") // this is straing F.A.C.T.S
-	// fmt.Println(gostring + "\n")
-	// fmt.Println(weirdSyntax)
+
 	// the following is a formated print
+	// formated text keyLetters v = value, T = variable's type
 	// you can also use a %T to print the variable's type
-	fmt.Printf("\n%v\n", quote.Opt())
-	// inside a formated string
-	//fmt.Printf("%v , %T \n", gofloat, gofloat)
-	//fmt.Printf("%v,%v", myString, myInt)
-	fmt.Println(countSeconds(-12340))
+	fmt.Printf("\n%v\n",
+		quote.Opt())
+
+	fmt.Println("enter # of seconds")
+	var seconds int
+	fmt.Scanln(&seconds)
+
+	fmt.Printf("clock : %v", countSeconds(seconds))
 }
