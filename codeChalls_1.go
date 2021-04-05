@@ -1,5 +1,3 @@
-// here we will try to explain what runes are
-
 package main
 
 // from codeWars (8kyu)
@@ -10,8 +8,14 @@ func EvenOrOdd(number int) string {
 	return "Odd"
 }
 
+// from codewars (8kyu)
+func OtherAngle(a int, b int) int {
+
+	return 180 - (a + b)
+}
+
 //from codewars (7kyu)
-func NbYear(p0 int, percent float64, aug int, p int) int {
+func NbYear(p0 int, percent float64, aug, p int) int {
 	var (
 		totalPop int = p0
 		years    int = 0
@@ -23,7 +27,7 @@ func NbYear(p0 int, percent float64, aug int, p int) int {
 }
 
 // from codeWars (7kyu)
-func Arithmetic(a int, b int, operator string) int {
+func Arithmetic(a, b int, operator string) int {
 	switch operator {
 	case "add":
 		return a + b
