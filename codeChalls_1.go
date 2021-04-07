@@ -1,7 +1,9 @@
 package main
 
 import (
+	"sort"
 	"strconv"
+	"strings"
 )
 
 // from codeWars (8kyu)
@@ -10,6 +12,42 @@ func EvenOrOdd(number int) string {
 		return "Even"
 	}
 	return "Odd"
+}
+
+// 8kyu
+func Goals(laLigaGoals, copaDelReyGoals, championsLeagueGoals int) int {
+	// your code
+	return laLigaGoals + copaDelReyGoals + championsLeagueGoals
+}
+
+// 8kyu
+
+func Xor(a, b bool) bool {
+
+	if a || b {
+		if a && b {
+			return false
+		}
+		return true
+	}
+
+	return false
+}
+
+// 8kyu
+func CorrectTail(body string, tail rune) bool {
+	return !(rune(body[len(body)-1]) != tail)
+}
+
+// 8kyu (forfeitted)
+func ExpressionMatter(a int, b int, c int) int {
+	expressions := []int{a + (b * c), b * a * c, c + c*b, (a + b) * c}
+	sort.Ints(expressions)
+	return expressions[len(expressions)-1]
+}
+
+func DNAtoRNA(dna string) string {
+	return strings.Replace(dna, "T", "U", -1)
 }
 
 // from codewars 8kyu
@@ -96,7 +134,7 @@ func Arithmetic(a, b int, operator string) int {
 	}
 }
 
-// seconds to readable time, from codeWars (6kyu)
+// seconds to readable time, from codeWars (5kyu)
 func countSeconds(userInput int) string {
 	// use int(f+number.decimal) to round up
 	if userInput > 359999 {

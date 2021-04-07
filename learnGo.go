@@ -13,5 +13,5 @@ func main() {
 	// 	fmt.Printf("%v\n", a[i])
 
 	// }
-	fmt.Println(RemoveChar("word"))
+	fmt.Println(DNAtoRNA("GCAT"))
 }
