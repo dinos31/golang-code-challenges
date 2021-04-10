@@ -7,11 +7,6 @@ import "fmt"
 //var c, python, java = true, false, "no!"
 
 func main() {
-	// var a []int
-	// for i := 0; i < 10; i++ {
-	// 	a = append(a, i+1)
-	// 	fmt.Printf("%v\n", a[i])
 
-	// }
-	fmt.Println(DNAtoRNA("GCAT"))
+	fmt.Println(solve("coDE"))
 }

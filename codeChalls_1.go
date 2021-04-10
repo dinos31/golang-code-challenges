@@ -134,7 +134,52 @@ func Arithmetic(a, b int, operator string) int {
 	}
 }
 
+//from codewars 8kyu
+
+func PositiveSum(numbers []int) int {
+	var acum int
+	for i := 0; i <= len(numbers)-1; i++ {
+		if numbers[i] >= 0 {
+			acum += numbers[i]
+		}
+	}
+	return acum
+}
+
+// 8kyu
+
+func grow(arr []int) int {
+	var acum int = arr[0]
+	for i := 1; i < len(arr); i++ {
+		acum = acum * arr[i]
+	}
+	return acum
+}
+
+// 8kyu
+
+func solve(str string) string {
+
+	var countLowers, countUppers int
+
+	for i := 0; i < len(str); i++ {
+		if string(rune(str[i])) == strings.ToLower(string(rune(str[i]))) {
+			countLowers++
+		}
+	}
+
+	countUppers = len(str) - countLowers
+
+	if countLowers > countUppers {
+		return strings.ToLower(str)
+	} else if countUppers > countLowers {
+		return strings.ToUpper(str)
+	}
+	return strings.ToLower(str)
+}
+
 // seconds to readable time, from codeWars (5kyu)
+
 func countSeconds(userInput int) string {
 	// use int(f+number.decimal) to round up
 	if userInput > 359999 {
