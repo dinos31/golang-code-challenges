@@ -8,5 +8,5 @@ import "fmt"
 
 func main() {
 
-	fmt.Println(solve("coDE"))
+	fmt.Println("hello world")
 }
