@@ -9,5 +9,7 @@ import (
 //var c, python, java = true, false, "no!"
 
 func main() {
-	fmt.Println(IsUpperCase("A C a"))
+	fmt.Printf("sin especiales : %v\n", removeNonAlpha("Mateo"))
+	fmt.Printf("al contrario : %v\n", removeNonAlpha(turnAround("Mateo")))
+	fmt.Println(palindrome("Mateo"))
 }
