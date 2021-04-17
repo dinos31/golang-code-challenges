@@ -1,6 +1,6 @@
 package main
 
-import "fmt"
+// the palindrome function is case sensitive
 
 func removeNonAlpha(str string) string {
 	rts := []rune{}
@@ -27,7 +27,5 @@ func turnAround(str string) string {
 func palindrome(str string) bool {
 	str = removeNonAlpha(str)
 	mirror := turnAround(removeNonAlpha(str))
-	fmt.Println(str)
-	fmt.Println(mirror)
 	return mirror == str
 }
