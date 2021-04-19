@@ -2,6 +2,7 @@ package main
 
 import (
 	"math"
+	"strconv"
 	"strings"
 )
 
@@ -61,4 +62,11 @@ func RepeatStr(repetitions int, value string) string {
 
 func QuarterOf(month int) int {
 	return int(math.Ceil(float64(month) / 3))
+}
+
+func BonusTime(salary int, bonus bool) string {
+	if bonus {
+		return "\u00A3" + strconv.Itoa(salary*10)
+	}
+	return "\u00A3" + strconv.Itoa(salary)
 }

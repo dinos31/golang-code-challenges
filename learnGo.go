@@ -9,6 +9,6 @@ import (
 //var c, python, java = true, false, "no!"
 
 func main() {
-	fmt.Println(QuarterOf(10))
+	fmt.Println(BonusTime(100, false))
 
 }
