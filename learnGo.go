@@ -9,6 +9,5 @@ import (
 //var c, python, java = true, false, "no!"
 
 func main() {
-	fmt.Println(BonusTime(100, false))
-
+	fmt.Println(SubtractSum(325))
 }
