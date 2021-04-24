@@ -70,3 +70,49 @@ func BonusTime(salary int, bonus bool) string {
 	}
 	return "\u00A3" + strconv.Itoa(salary)
 }
+
+func StackHeight2d(layers int) float64 {
+
+	acum := 0
+
+	for i := 0; i <= layers; i++ {
+		acum += i
+	}
+
+	return float64(acum)
+}
+
+func Factorial(n int64) int64 {
+	if n < 2 {
+		return 1
+	} else if n > 0 {
+		for i := n - 1; i != 0; i-- {
+			n = n * i
+		}
+		return n
+	} else {
+		for i := n + 1; i != 0; i++ {
+			n = n * i
+		}
+		return -n
+	}
+}
+
+// this guy is a genius
+// func Factorial(n int) int {
+// 	if n < 2 {
+// 	  return 1
+// 	}
+
+// 	return n * Factorial(n - 1)
+//   }
+
+func WordsToMarks(s string) int {
+
+	x := 0
+	for _, value := range s {
+		x += int(value - 96)
+	}
+
+	return x
+}

@@ -9,5 +9,5 @@ import (
 //var c, python, java = true, false, "no!"
 
 func main() {
-	fmt.Println(SubtractSum(325))
+	fmt.Println(WordsToMarks("attitude"))
 }
